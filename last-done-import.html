@@ -21,7 +21,8 @@
     </div>
     <script>
         var search = window.location.search;
-        var intentUrl = "intent://import/" + search + "#Intent;scheme=last-done;package=com.nenadsrbinovski.lastdone;end";
+        var currentUrl = encodeURIComponent(window.location.href);
+        var intentUrl = "intent://import/" + search + "#Intent;scheme=last-done;package=com.nenadsrbinovski.lastdone;S.browser_fallback_url=" + currentUrl + ";end";
         document.getElementById('openBtn').href = intentUrl;
     </script>
 </body>
