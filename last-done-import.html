@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Tracker - Last Done</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding: 60px 20px; background: #f8f9fa; color: #333; }
+        .card { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #1a73e8; }
+        p { color: #666; line-height: 1.5; }
+        .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #1a73e8; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; }
+        .btn:hover { background: #1557b0; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Last Done Tracker</h2>
+        <p>Tap the button below to import this tracker into your Last Done app.</p>
+        <a id="openBtn" class="btn" href="#">Open in Last Done</a>
+    </div>
+    <script>
+        var search = window.location.search;
+        var intentUrl = "lastdone://import" + search;
+        document.getElementById('openBtn').href = intentUrl;
+    </script>
+</body>
+</html>
